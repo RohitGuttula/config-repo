@@ -4,13 +4,14 @@ spring:
   application:
     name: ConfigServer
   profiles:
-    #active: native
+    # active: native
     active: git
   cloud:
     config:
       server:
-#        native:
-#          search-locations: "classpath:/Config"
+          # native:
+          # search-locations: "classpath:/config"
+          # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
           uri: "https://github.com/RohitGuttula/config-repo.git"
           default-label: master
