@@ -4,10 +4,16 @@ spring:
   application:
     name: ConfigServer
   profiles:
-    active: native
+    #active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/Config"
-
+#        native:
+#          search-locations: "classpath:/Config"
+        git:
+          uri: "https://github.com/RohitGuttula/config-repo.git"
+          default-label: master
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
