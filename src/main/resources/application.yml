@@ -2,16 +2,16 @@ server:
   port: 8071
 spring:
   application:
-    name: ConfigServer
+    name: "ConfigServer"
   profiles:
     # active: native
     active: git
   cloud:
     config:
       server:
-          # native:
-          # search-locations: "classpath:/config"
-          # search-locations: "file:///Users//eazybytes//Documents//config"
+        # native:
+        # search-locations: "classpath:/config"
+        # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
           uri: "https://github.com/RohitGuttula/config-repo.git"
           default-label: master
